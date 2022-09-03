@@ -1,0 +1,18 @@
+import { Container, Divider } from '@mui/material'
+import React from 'react'
+import PerformanceSummary from '../components/elements/performanceSummary'
+import LastUpdate from '../core/lastUpdate'
+
+const Production = () => {
+  return (
+    <Container>
+        <h2>Performance Overview</h2>
+        <Divider/>
+        <LastUpdate />
+        <br/>
+        <PerformanceSummary />
+    </Container>
+  )
+}
+
+export default Production
