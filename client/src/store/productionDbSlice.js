@@ -36,7 +36,7 @@ const productionDbSlice = createSlice({
     reducers: {
         addProductionByDate : (state, action) => {
             state.dailyData = action.payload
-            console.log(state.dailyData)
+            console.log('daily data: '+state.dailyData)
         }
     }
 })

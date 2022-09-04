@@ -2,25 +2,26 @@ import { Paper, Container ,Typography, Divider } from "@mui/material"
 import { blue, grey } from "@mui/material/colors"
 
 
-export const PerformanceCards = ({data}) => {
 
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+// export const PerformanceCards = ({data}) => {
+
+//   function capitalizeFirstLetter(string) {
+//     return string.charAt(0).toUpperCase() + string.slice(1);
+//   }
   
 
-  return(
-    <>
-    <Container sx={{display:'flex', justifyContent:'start', flexWrap:'wrap'}}>
-      {data.map((e) => {
-          return <PerformanceCard data={e}/>
-        })}
-      </Container>
-    </>
-  )
+//   return(
+//     <>
+//     <Container sx={{display:'flex', flexDirection:'column',justifyContent:'start', flexWrap:'wrap'}}>
+//       {data.map((e) => {
+//           return <PerformanceCard data={e}/>
+//         })}
+//       </Container>
+//     </>
+//   )
 
 
-}
+// }
 
 
 
@@ -31,10 +32,10 @@ export const PerformanceCard = ({data}) => {
     return (
       
           
-          <Paper elevation={0} sx={{border:1, borderColor: grey[200], display:'flex', flexDirection:'row', justifyContent:'space-between', margin:"7px", backgroundColor:grey[100], minWidth:'250px'}}>
+          <Paper elevation={0} sx={{border:1, borderColor: grey[300], display:'flex', flexDirection:'row', justifyContent:'space-between', margin:"2px", minWidth:'250px'}}>
             <div>
             <div style={{margin:'5px 0px 0px 10px'}}>
-              <Typography  sx={{textAlign:'start'}} fontSize={14} fontWeight='bold'>{data['department']}</Typography>
+              <Typography  sx={{textAlign:'start'}} fontSize={12} fontWeight='bold'>AT A GLANCE</Typography>
               <Divider color={blue[400]}/>
             </div>
               <Typography fontSize={18} sx={{ margin:'10px 0px 0px 10px', textAlign:'start'}}>{data['man_power']}</Typography>
