@@ -3,10 +3,10 @@ import React, { useEffect } from 'react'
 import LastUpdate from '../core/lastUpdate'
 import { getMachineDb } from '../store/machineDbSlice'
 import store from '../store/str'
-import BarchartMachine from '../components/elements/barchartMachine'
 import LineWiseMachineSummary from '../components/elements/lineWiseMachineSummary'
 import MachineSummary from '../components/elements/machineSummary'
 import UtilTypeWiseMachineSummary from '../components/elements/utilTypeWiseMachineSummary'
+import DoughnutchartMachine from '../components/elements/doughnutchartMachine'
 
 const MachineDatabase = () => {
   
@@ -22,7 +22,8 @@ const MachineDatabase = () => {
       <br/>
       <MachineSummary />
       <br />
-      <BarchartMachine />
+      <br />
+      <DoughnutchartMachine />
       <br/>
       <LineWiseMachineSummary />
       <br />

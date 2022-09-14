@@ -1,18 +1,20 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import Barchart from '../common/barchart';
+import Doughnutchart from '../common/doughnutchart';
 
 
-const BarchartMachine = () => {
+const DoughnutchartMachine = () => {
 
     const mcType = useSelector((state) => state.machinedb.typeWise);
 
     function getBarChartData (obj) {
         const dataPoints = [];
-        if(obj)Object.keys(obj).map((e) => {
-            console.log(e+': '+obj[e])
-            if(e!=='total'){
-                dataPoints.push({y: getParcentage(obj[e], obj['total']), label: e})
+        
+        mcType.map((e) => {
+
+            if(getParcentage(e.quantity, 4294)>1)
+            {
+                dataPoints.push({y: getParcentage(e.quantity, 4294), label: e.name})
             }
         })
 
@@ -28,11 +30,11 @@ const BarchartMachine = () => {
 
 
   return (
-    <Barchart data={getBarChartData(mcType)} suffix='%' />
+    <Doughnutchart data={getBarChartData(mcType)} suffix='%' />
   )
 }
 
-export default BarchartMachine;
+export default DoughnutchartMachine;
 
 
 

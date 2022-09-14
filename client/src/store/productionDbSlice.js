@@ -25,22 +25,47 @@ export const getProductionByDate = ({date}) => {
     }
 }
 
+export const getProductionByMonth = ({month}) => {
+    
+    return async (dispatch, getState) => {
+        const res = await fetch('http://172.26.41.3:8080/getProductionByMonth', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              month: month
+            })
+          });
+        const body = await res.json();
+        
+        console.log(body[0])
+        dispatch(addProductionByMonth(body))
+        
+    }
+}
+
 
 
 
 const productionDbSlice = createSlice({
     name: 'productionDb',
     initialState: {
-        dailyData: null
+        dailyData: null,
+        monthlyData: null
     },
     reducers: {
         addProductionByDate : (state, action) => {
             state.dailyData = action.payload
-            console.log('daily data: '+state.dailyData)
+            // console.log('daily data: '+state.dailyData)
+        },
+        addProductionByMonth : (state, action) => {
+            state.monthlyData = action.payload
         }
     }
 })
 
 export default productionDbSlice;
 
-export const {addProductionByDate} = productionDbSlice.actions;
+export const {addProductionByDate, addProductionByMonth} = productionDbSlice.actions;

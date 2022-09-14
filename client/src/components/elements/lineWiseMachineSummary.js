@@ -17,26 +17,10 @@ const LineWiseMachineSummary = () => {
     <div>
       <h3>Line Wise Machines</h3>
       <Container sx={{display:'flex', justifyContent:'start', flexWrap:'wrap'}}>
-      <DropDownList title="Line no" handleChange={handleChange} value={line} data={Object.keys(machinedb)} />
-      {/* <FormControl variant="outlined" sx={{ m: 1, minWidth: 120, display:'flex', alignSelf:'start' }}>
-        <InputLabel id="demo-simple-select-outlined-label">Line no.</InputLabel>
-        <Select
-          labelId="demo-simple-select-outlined-label"
-          id="demo-simple-select-standard"
-          value={line}
-          onChange={handleChange}
-          label="Age"
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          {machinedb?Object.keys(machinedb).map((element) => {
-           return (<MenuItem value={element}>{element}</MenuItem>)
-          }):null}
-        </Select>
-      </FormControl> */}
+      {machinedb?<DropDownList title="Line no" handleChange={handleChange} value={line} data={Object.keys(machinedb)} />:null}
+     
       </Container>
-      {machinedb[line]?<CustomCards data={machinedb[line]} />:<Container sx={{display:'flex', justifyContent:'start'}} ><p>Select line first</p></Container>}
+      {machinedb&&line?<CustomCards data={machinedb[line]} />:<Container sx={{display:'flex', justifyContent:'start'}} ><p>Select line first</p></Container>}
     </div>
   )
 }

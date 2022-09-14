@@ -1,11 +1,11 @@
-import { blue } from '@mui/material/colors';
+import { blue, green, grey, indigo, lightBlue, lightGreen, orange, purple, red, yellow } from '@mui/material/colors';
 import React from 'react'
 import CanvasJSReact from '../../assets/canvasjs-3.6.6/canvasjs.react';
 
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const Barchart = ({data, suffix=''}) => {
+const Doughnutchart = ({data, suffix=''}) => {
 
     const options = {
         colorSet: "muiColor",
@@ -31,9 +31,9 @@ const Barchart = ({data, suffix=''}) => {
             titleFontSize: 15,
         },
         data: [{
-            type: "bar",
-            indexLabel: "{y}"+suffix,
-            indexLabelFontSize: 10,
+            type: "doughnut",
+            indexLabel: "{label} {y}"+suffix,
+            indexLabelFontSize: 15,
             dataPoints: data
         }]
     }
@@ -45,9 +45,14 @@ const Barchart = ({data, suffix=''}) => {
 	}
 
     CanvasJS.addColorSet("muiColor", [
-        '#83c3f7'
+        lightGreen[300],
+        red[300],
+        grey[300],
+        yellow[300],
+        lightBlue[300],
+        purple[300],
+        indigo[300]
     ])
-
 
   return (
     <div style={{margin: '50px'}}>
@@ -56,4 +61,4 @@ const Barchart = ({data, suffix=''}) => {
   )
 }
 
-export default Barchart;
+export default Doughnutchart;

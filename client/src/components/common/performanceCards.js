@@ -35,7 +35,7 @@ export const PerformanceCard = ({data}) => {
           <Paper elevation={0} sx={{border:1, borderColor: grey[300], display:'flex', flexDirection:'row', justifyContent:'space-between', margin:"2px", minWidth:'250px'}}>
             <div>
             <div style={{margin:'5px 0px 0px 10px'}}>
-              <Typography  sx={{textAlign:'start'}} fontSize={12} fontWeight='bold'>AT A GLANCE</Typography>
+              <Typography  sx={{textAlign:'start'}} fontSize={12} fontWeight='bold'>{data['department']}</Typography>
               <Divider color={blue[400]}/>
             </div>
               <Typography fontSize={18} sx={{ margin:'10px 0px 0px 10px', textAlign:'start'}}>{data['man_power']}</Typography>

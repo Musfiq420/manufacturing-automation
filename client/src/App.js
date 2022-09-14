@@ -10,6 +10,7 @@ import AdminPanel from './pages/admin';
 import MachineDatabase from './pages/machinedb';
 import Sidebar from './components/layout/sidebar';
 import Production from './pages/production';
+import { grey } from '@mui/material/colors';
 
 
 function App() {

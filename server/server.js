@@ -114,5 +114,21 @@ app.get('/users' , (req, res) => {
                       
             })
     })
+
+
+
+    app.post('/getProductionByMonth', (req, res) => {
+        const month = req.body.month;
+        mysqlConnection.query(`select * from production_details where SUBSTRING(date, 1, 2) = ${month}`, (err, rows, fields) => {
+            try {
+                
+                res.send(rows)
+                
+            } catch (error) {
+                console.log(err);
+            }
+                      
+            })
+    })
         
         

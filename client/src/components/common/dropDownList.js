@@ -5,15 +5,17 @@ import React from 'react'
 const DropDownList = ({title, value, handleChange, data}) => {
   return (
     <>
-      <FormControl variant="filled" sx={{ m: 1, minWidth: 120, display:'flex', alignSelf:'start' }}>
-        <InputLabel sx={{color:grey[300],}} id="demo-simple-select-outlined-label">{title}</InputLabel>
+      <FormControl variant="filled" sx={{  display:'flex', alignSelf:'start' }}>
+        {/* <InputLabel sx={{color:grey[300],}} id="demo-simple-select-outlined-label">{title}</InputLabel> */}
         <Select
           labelId="demo-simple-select-outlined-label"
           id="demo-simple-select-standard"
           value={value}
           onChange={handleChange}
           label="Age"
-          sx={{backgroundColor:'white',fontSize:'20px', padding:'5px'}}
+          sx={{backgroundColor:'white',fontSize:'20px', padding:'5px', border:1, borderColor: grey[200], borderRadius:'5px'}}
+          disableUnderline
+          
         >
           <MenuItem value="">
             <em>None</em>

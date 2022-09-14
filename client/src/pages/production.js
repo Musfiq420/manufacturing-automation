@@ -6,7 +6,7 @@ import LastUpdate from '../core/lastUpdate'
 
 const Production = () => {
   return (
-    <Container sx={{backgroundColor:grey[100]}}>
+    <Container>
         <h2>Performance Overview</h2>
         <Divider/>
         <LastUpdate />
