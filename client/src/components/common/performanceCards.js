@@ -38,7 +38,7 @@ export const PerformanceCard = ({data}) => {
               <Typography  sx={{textAlign:'start'}} fontSize={12} fontWeight='bold'>{data['department']}</Typography>
               <Divider color={blue[400]}/>
             </div>
-              <Typography fontSize={18} sx={{ margin:'10px 0px 0px 10px', textAlign:'start'}}>{data['man_power']}</Typography>
+              <Typography fontSize={20} sx={{ margin:'10px 0px 0px 10px', textAlign:'start'}}>{data['man_power']}</Typography>
               <Typography color={grey[400]} fontSize={10} sx={{ margin:'0px 0px 0px 10px', textAlign:'start'}}>Man Power</Typography>
               <Typography  fontSize={20} sx={{ margin:'15px 0px 0px 10px', textAlign:'start'}}>{data['production']} <span style={{color:grey[400],fontSize:12}}>/{data['target']}</span></Typography>
               <Typography color={grey[400]} fontSize={10} sx={{ margin:'0px 0px 0px 10px', textAlign:'start'}}>Production/Target</Typography>

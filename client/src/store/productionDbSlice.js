@@ -47,13 +47,35 @@ export const getProductionByMonth = ({month}) => {
 }
 
 
+export const getProductionByDateRange = ({startDate, endDate}) => {
+    
+  return async (dispatch, getState) => {
+      const res = await fetch('http://172.26.41.3:8080/getProductionByDateRange', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            "startDate": startDate, "endDate": endDate
+          })
+        });
+      const body = await res.json();
+      
+      console.log(res)
+      dispatch(addProductionByMonth(body))
+      
+  }
+}
+
+
 
 
 const productionDbSlice = createSlice({
     name: 'productionDb',
     initialState: {
         dailyData: null,
-        monthlyData: null
+        monthlyData: null,
     },
     reducers: {
         addProductionByDate : (state, action) => {

@@ -1,19 +1,19 @@
 import { Container, Divider } from '@mui/material'
 import { grey } from '@mui/material/colors'
 import React from 'react'
-import PerformanceSummary from '../components/elements/performanceSummary'
+import LineWiseHourlyProduction from '../components/elements/lineWiseHourlyProduction'
 import LastUpdate from '../core/lastUpdate'
 
-const Production = () => {
+const HourlyProduction = () => {
   return (
     <Container>
-        <h2>Performance Overview</h2>
+        <h2>Real Time Production</h2>
         <Divider/>
         <LastUpdate />
         <br/>
-        <PerformanceSummary />
+        <LineWiseHourlyProduction />
     </Container>
   )
 }
 
-export default Production
+export default HourlyProduction

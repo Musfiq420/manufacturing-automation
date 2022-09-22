@@ -10,9 +10,9 @@ const CustomToggleGroup = ({value, handleChange, data}) => {
       aria-label="text alignment"
     >
       {data.map((e) => {
-        <ToggleButton value={e} aria-label="left aligned">
+        return (<ToggleButton value={e} aria-label="left aligned">
          {e}
-        </ToggleButton>
+        </ToggleButton>)
       })}
       
     </ToggleButtonGroup>

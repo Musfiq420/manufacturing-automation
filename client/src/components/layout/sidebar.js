@@ -60,8 +60,11 @@ const Sidebar = () => {
             <ListItemButton sx={stl} selected={window.location.pathname==="/machinedb"} onClick={() => linkTO('machinedb')} >
                 <ListItemText primary="Machine Database" /> 
             </ListItemButton>
-            <ListItemButton sx={stl} selected={window.location.pathname==="/production"} onClick={() => linkTO('production')} >
+            <ListItemButton sx={stl} selected={window.location.pathname==="/performance"} onClick={() => linkTO('performance')} >
                 <ListItemText primary="Performance Overview" /> 
+            </ListItemButton>
+            <ListItemButton sx={stl} selected={window.location.pathname==="/hourlyproduction"} onClick={() => linkTO('hourlyproduction')} >
+                <ListItemText primary="Real Time Production" /> 
             </ListItemButton>
             {admin==="yes"? <ListItemButton sx={stl} selected={window.location.pathname==="/admin"} onClick={() => linkTO('admin')} >
                 <ListItemText primary="Admin Panel" />

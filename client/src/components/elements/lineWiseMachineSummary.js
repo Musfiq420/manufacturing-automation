@@ -13,6 +13,11 @@ const LineWiseMachineSummary = () => {
   };
   const machinedb = useSelector((state) => state.machinedb.lineWise);
 
+  useEffect(() => {
+    console.log(machinedb)
+  }, [])
+  
+
   return (
     <div>
       <h3>Line Wise Machines</h3>

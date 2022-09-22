@@ -12,7 +12,7 @@ const DoughnutchartMachine = () => {
         
         mcType.map((e) => {
 
-            if(getParcentage(e.quantity, 4294)>1)
+            if(getParcentage(e.quantity, 4294)>1 && e.name !== 'Others')
             {
                 dataPoints.push({y: getParcentage(e.quantity, 4294), label: e.name})
             }

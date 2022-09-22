@@ -131,4 +131,20 @@ app.get('/users' , (req, res) => {
             })
     })
         
+
+    app.post('/getProductionByDateRange', (req, res) => {
+        const startDate = req.body.startDate;
+        const endDate = req.body.endDate;
+        console.log(startDate+' dflkj '+endDate);
+        mysqlConnection.query('SELECT * from production_details where date between \"' +startDate+'\" and \"'+endDate+'\";', (err, rows, fields) => {
+            try {
+                
+                res.send(rows)
+                
+            } catch (error) {
+                console.log(err);
+            }
+                      
+            })
+    })
         

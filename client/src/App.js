@@ -9,8 +9,8 @@ import Login from './pages/login';
 import AdminPanel from './pages/admin';
 import MachineDatabase from './pages/machinedb';
 import Sidebar from './components/layout/sidebar';
-import Production from './pages/production';
-import { grey } from '@mui/material/colors';
+import HourlyProduction from './pages/hourlyProduction';
+import Performance from './pages/performance';
 
 
 function App() {
@@ -25,7 +25,8 @@ function App() {
           <Route path="/" element={loggedIn?<Navigate replace to="/machinedb" />:<Navigate replace to="/login" />} />
           <Route path="/login" element= {<Login />} />
           <Route path="/machinedb" element={loggedIn?<MachineDatabase />:<Navigate replace to="/login" />} />
-          <Route path="/production" element={loggedIn?<Production />:<Navigate replace to="/login" />} />
+          <Route path="/performance" element={loggedIn?<Performance />:<Navigate replace to="/login" />} />
+          <Route path="/hourlyproduction" element={loggedIn?<HourlyProduction />:<Navigate replace to="/login" />} />
           <Route path="/admin" element={loggedIn?<AdminPanel />:<Navigate replace to="/login" />} />
         </Routes>
         </div>

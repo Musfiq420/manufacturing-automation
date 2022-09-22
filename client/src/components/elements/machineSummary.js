@@ -8,13 +8,7 @@ import EnhancedTable from '../common/dataTable';
 
 const MachineSummary = () => {
 
-  const mcType = useSelector((state) => state.machinedb.typeWise);
-
-  useEffect(() => {
-    console.log(mcType)
-  }, [])
-  
-
+  const mcType = useSelector((state) => state.machinedb.typeWise);  
 
   return (
     <div>

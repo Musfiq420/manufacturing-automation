@@ -26,6 +26,7 @@ import { Container } from '@mui/system';
 import styled from '@emotion/styled';
 import { blue, grey } from '@mui/material/colors';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 
 
 
@@ -98,7 +99,7 @@ function EnhancedTableHead(props) {
             key={headCell.id}
             align={headCell.numeric ? 'right' : 'left'}
             padding={0}
-            sx={{color:'white', fontWeight:'bold'}}
+            sx={{color:'white', fontWeight:'bold', fontSize:18}}
           >
               {headCell.label}
           </TableCell>
@@ -165,12 +166,15 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-const ExpandTable = ({row, index}) => {
+const ExpandTable = ({row, index, handleExpand}) => {
   const [selected, setSelected] = React.useState(false);
 
-  const handleExpand = () => {
-    setSelected(!selected);
-  }
+  React.useEffect(() => {
+    setSelected(false);
+    console.log("useEffect called");
+  
+  }, [row])
+  
 
   return (
     <>
@@ -179,21 +183,22 @@ const ExpandTable = ({row, index}) => {
         key={row.name}
       >
         <TableCell sx={{width:'30px', padding:0}}>
-          <IconButton disabled={row.types?undefined:'true'} onClick={handleExpand}>
-            <KeyboardArrowDown />
+          <IconButton disabled={row.types?undefined:'true'} onClick={() => setSelected(!selected)}>
+            {selected?<KeyboardArrowUp />:<KeyboardArrowDown />}
           </IconButton>
         </TableCell>
         
         <TableCell
           component="th"
           scope="row"
+          sx={{fontSize:16}}
         >
            {row.name}
         </TableCell>
-        <TableCell align="right">{row.quantity}</TableCell>
+        <TableCell align="right" sx={{fontSize:16}}>{row.quantity}</TableCell>
       </TableRow>
      {
-        ( selected?
+        ( selected&&row.types?
         <>{row.types.map((e) => {
           return (
             <TableRow>
@@ -218,28 +223,11 @@ const ExpandTable = ({row, index}) => {
 }
 
 export default function EnhancedTable() {
-  const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('calories');
-  const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const rows = useSelector((state) => state.machinedb.typeWise);
 
-  const handleRequestSort = (event, property) => {
-    const isAsc = orderBy === property && order === 'asc';
-    setOrder(isAsc ? 'desc' : 'asc');
-    setOrderBy(property);
-  };
-
-  const handleSelectAllClick = (event) => {
-    if (event.target.checked) {
-      const newSelected = rows.map((n) => n.name);
-      setSelected(newSelected);
-      return;
-    }
-    setSelected([]);
-  };
 
 
   const handleChangePage = (event, newPage) => {
@@ -251,8 +239,6 @@ export default function EnhancedTable() {
     setPage(0);
   };
 
-
-  const isSelected = (name) => selected.indexOf(name) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -275,62 +261,15 @@ export default function EnhancedTable() {
               {createData(rows)
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                 .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
 
                   return (
                     <ExpandTable row={row} index={index} />
-                    // <>
-                    // <TableRow                      
-                    //   tabIndex={-1}
-                    //   key={row.name}
-                      
-                    // >
-                      
-                    //   <TableCell sx={{width:'30px', padding:0}}>
-                    //     <IconButton>
-                    //       <KeyboardArrowDown  />
-                    //     </IconButton>
-                    //   </TableCell>
-                     
-                      
-                    //   <TableCell
-                    //     component="th"
-                    //     id={labelId}
-                    //     scope="row"
-                    //   >
-                    //    {(page * rowsPerPage) + index+1}. {row.name}
-                    //   </TableCell>
-                    //   <TableCell align="right">{row.quantity}</TableCell>
-                    // </TableRow>
-                    // {
-                    //   (row.types?
-                    //     row.expand?
-                    //   <>{row.types.map((e) => {
-                    //     return (
-                    //       <TableRow>
-                    //         <TableCell>
-
-                    //         </TableCell>
-                    //         <TableCell sx={{paddingLeft:'50px'}}>
-                    //           {e.name}
-                    //         </TableCell>
-                    //         <TableCell>
-                    //           {e.quantity}
-                    //         </TableCell>
-                    //       </TableRow>
-                    //     )
-                    //   })}</>: null:null)
-                      
-                    // }
-                    // </>
-                    
                   );
                 })}
               {emptyRows > 0 && (
                 <TableRow
                   style={{
-                    height: ( 53) * emptyRows,
+                    height: (53) * emptyRows,
                   }}
                 >
                   <TableCell colSpan={6} />

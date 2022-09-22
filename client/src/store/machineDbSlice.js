@@ -3,6 +3,50 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const typeWiseData = [
     {
+        name: 'Single Needle',
+        quantity: 1817,
+        types: [
+            {
+                name: 'Single Needle Lock Stitch',
+                quantity: 1617
+            },
+            {
+                name: 'Single Needle Lock Stitch Long Arm',
+                quantity: 18
+            },
+            {
+                name: 'Single Needle Lock Stitch (Needle Feed)',
+                quantity: 59
+            },
+            {
+                name: 'Single Needle Edge Cutter',
+                quantity: 65,
+            },
+            {
+                name: 'Single Needle Chain Stitch',
+                quantity: 58,
+            },
+        ]
+        
+    },
+    
+    {
+        name: 'Double Needle',
+        quantity: 39,
+        types: [
+            {
+                name: 'Double Needle Chain Stitch',
+                quantity: 3,
+                types: null
+            },
+            {
+                name: 'Double Needle Lock Stitch',
+                quantity: 36,
+                types: null
+            },
+        ]
+    },
+    {
         name: 'Flat lock',
         quantity: 796,
         types: [
@@ -82,53 +126,35 @@ const typeWiseData = [
         
     },
     {
-        name: 'Single Needle Lock Stitch',
-        quantity: 1694,
+        name: 'Button',
+        quantity: 171,
         types: [
             {
-                name: 'Single Needle Lock Stitch',
-                quantity: 1617
+                name: 'Button Hole',
+                quantity: 53,
+                types: null
             },
             {
-                name: 'Single Needle Lock Stitch Long Arm',
-                quantity: 18
+                name: 'Button Attach',
+                quantity: 55,
+                types: null
             },
             {
-                name: 'Single Needle Lock Stitch (Needle Feed)',
-                quantity: 59
+                name: 'Snap Button',
+                quantity: 55,
+                types: null
+            },
+            {
+                name: 'Button Wrapping & Knotting',
+                quantity: 9,
+                types: null
+            },
+            {
+                name: 'Eyelet Hole',
+                quantity: 1,
+                types: null
             },
         ]
-        
-    },
-    {
-        name: 'Single Needle Edge Cutter',
-        quantity: 65,
-        types: null 
-    },
-    {
-        name: 'Single Needle Chain Stitch',
-        quantity: 58,
-        types: null
-    },
-    {
-        name: 'Double Needle Chain Stitch',
-        quantity: 3,
-        types: null
-    },
-    {
-        name: 'Double Needle Lock Stitch',
-        quantity: 36,
-        types: null
-    },
-    {
-        name: 'Button Hole',
-        quantity: 53,
-        types: null
-    },
-    {
-        name: 'Button Attach',
-        quantity: 55,
-        types: null
     },
     {
         name: 'Bar Tack',
@@ -148,21 +174,6 @@ const typeWiseData = [
     {
         name: 'Kansai Special',
         quantity: 53,
-        types: null
-    },
-    {
-        name: 'Rib Cutter',
-        quantity: 30,
-        types: null
-    },
-    {
-        name: 'Snap Button',
-        quantity: 55,
-        types: null
-    },
-    {
-        name: 'Pickoting',
-        quantity: 8,
         types: null
     },
     {
@@ -189,90 +200,6 @@ const typeWiseData = [
         ]
     },
     {
-        name: 'Button Wrapping & Knotting',
-        quantity: 9,
-        types: null
-    },
-    {
-        name: 'Blanket Sel Stich',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Back Tape',
-        quantity: 3,
-        types: null
-    },
-    {
-        name: 'Chain Shell Stitch',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Thread Trimmer',
-        quantity: 60,
-        types: null
-    },
-    {
-        name: 'Eyelet Hole',
-        quantity: 1,
-        types: null
-    },
-    {
-        name: 'Shuttle Stitch',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Smoke',
-        quantity: 3,
-        types: [
-            {
-                name: 'Smoke 33 Needle',
-                quantity: 2
-            },
-            {
-                name: 'Smoke 25 Needle',
-                quantity: 1
-            }
-        ]
-    },
-    {
-        name: 'Pin Tacking',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Hand Stitch',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Pearl Setting',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Hot Fix Setting',
-        quantity: 4,
-        types: null
-    },
-    {
-        name: 'Thread Rewinding',
-        quantity: 9,
-        types: null
-    },
-    {
-        name: 'Label Cutter',
-        quantity: 3,
-        types: null
-    },
-    {
-        name: 'Bonding',
-        quantity: 3,
-        types: null
-    },
-    {
         name: 'Automatic Back Moon (Pocket Setter)',
         quantity: 6,
         types: null
@@ -283,60 +210,122 @@ const typeWiseData = [
         types: null
     },
     {
-        name: 'Hydraulic Press Dai Cutting',
-        quantity: 2,
-        types: null
+        name: 'Cap',
+        quantity: 24,
+        types: [
+            {
+                name: 'Hydraulic Press Dai Cutting',
+                quantity: 2,
+            },
+            {
+                name: 'Plastic Staple Attacher',
+                quantity: 5,
+            },
+            {
+                name: 'Automatic Sweat Band Making',
+                quantity: 2,
+            },
+            {
+                name: 'Automatic Cap Ironing',
+                quantity: 2,
+            },
+            {
+                name: 'Automatic Front Panel Pressing',
+                quantity: 2,
+            },
+            {
+                name: 'Peak Curving',
+                quantity: 2,
+            },
+            {
+                name: 'Cap Peak Cooling',
+                quantity: 2,
+            },
+            {
+                name: 'Button Covering',
+                quantity: 2,
+            },
+            {
+                name: 'Top Button Fixing',
+                quantity: 2,
+            },
+            {
+                name: 'Automatic Bayes Cutting',
+                quantity: 1,
+            },
+            {
+                name: 'Automatic Visor Sewing',
+                quantity: 2,
+            },
+        ]
     },
     {
-        name: 'Plastic Staple Attacher',
-        quantity: 5,
-        types: null
+        name: 'Others',
+        quantity: 173,
+        types: [
+            {
+                name: 'Rib Cutter',
+                quantity: 30,
+            },
+            {
+                name: 'Pickoting',
+                quantity: 8,
+            },
+            {
+                name: 'Blanket Sel Stich',
+                quantity: 2,
+            },
+            {
+                name: 'Back Tape',
+                quantity: 3,
+            },
+            {
+                name: 'Chain Shell Stitch',
+                quantity: 2,
+            },
+            {
+                name: 'Thread Trimmer',
+                quantity: 60,
+            },
+            {
+                name: 'Shuttle Stitch',
+                quantity: 2,
+            },
+            {
+                name: 'Smoke',
+                quantity: 3,
+            },
+            {
+                name: 'Pin Tacking',
+                quantity: 2,
+            },
+            {
+                name: 'Hand Stitch',
+                quantity: 2,
+            },
+            {
+                name: 'Pearl Setting',
+                quantity: 2,
+            },
+            {
+                name: 'Hot Fix Setting',
+                quantity: 4,
+            },
+            {
+                name: 'Thread Rewinding',
+                quantity: 9,
+            },
+            {
+                name: 'Label Cutter',
+                quantity: 3,
+            },
+            {
+                name: 'Bonding',
+                quantity: 3,
+            },
+        ]
     },
-    {
-        name: 'Automatic Sweat Band Making',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Automatic Cap Ironing',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Automatic Front Panel Pressing',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Peak Curving',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Cap Peak Cooling',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Button Covering',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Top Button Fixing',
-        quantity: 2,
-        types: null
-    },
-    {
-        name: 'Automatic Bayes Cutting',
-        quantity: 1,
-        types: null
-    },
-    {
-        name: 'Automatic Visor Sewing',
-        quantity: 2,
-        types: null
-    },
+    
 
 
 ]
