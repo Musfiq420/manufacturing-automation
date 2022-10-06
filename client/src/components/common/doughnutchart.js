@@ -1,6 +1,8 @@
+import { Box } from '@mui/material';
 import { blue, green, grey, indigo, lightBlue, lightGreen, orange, purple, red, yellow } from '@mui/material/colors';
 import React from 'react'
 import CanvasJSReact from '../../assets/canvasjs-3.6.6/canvasjs.react';
+import { BoxMedium } from './customBox';
 
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -12,8 +14,7 @@ const Doughnutchart = ({data, suffix=''}) => {
         animationEnabled: true,
         theme: "light2",
         title:{
-            text: "Types of Machines",
-            fontSize: 20,
+            text: ""
         },
         axisX: {
             title: "Machine Type",
@@ -55,9 +56,9 @@ const Doughnutchart = ({data, suffix=''}) => {
     ])
 
   return (
-    <div style={{margin: '50px'}}>
+    <Box margin='20px'>
         <CanvasJSChart options = {options} />
-    </div>
+    </Box>
   )
 }
 

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import CustomCards from "../common/customCards";
 import CustomProgressBars from "../common/customProgressBar";
+import { H4 } from "../common/customTexts";
 
 
 const UtilTypeWiseMachineSummary = () => {
@@ -9,7 +10,7 @@ const UtilTypeWiseMachineSummary = () => {
 
   return (
     <div>
-        <h3>Type-wise Machine Utilization</h3>
+        <H4>Type-wise Machine Utilization</H4>
         {/* {mcUtilType?<CustomCards data={mcUtilType} />:<p>no utilization data</p>} */}
         {mcUtilType?<CustomProgressBars data={mcUtilType} />:<p>no utilization data</p>}
     </div>

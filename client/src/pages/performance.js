@@ -1,17 +1,19 @@
 import { Container, Divider } from '@mui/material'
-import { grey } from '@mui/material/colors'
 import React from 'react'
+import { BoxBig } from '../components/common/customBox'
+import { H3 } from '../components/common/customTexts'
+import { SizedBoxMedium } from '../components/common/sizedBox'
 import PerformanceSummary from '../components/elements/performanceSummary'
 import LastUpdate from '../core/lastUpdate'
 
 const Performance = () => {
   return (
     <Container>
-        <h2>Performance Overview</h2>
-        <Divider/>
-        <LastUpdate />
-        <br/>
-        <PerformanceSummary />
+      <BoxBig>
+        <H3>Performance Overview</H3>
+      </BoxBig>
+      <Divider/>
+      <PerformanceSummary />
     </Container>
   )
 }

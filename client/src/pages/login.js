@@ -3,10 +3,7 @@ import LoginView from '../components/elements/loginView';
 
 const Login = () => {    
     return (
-        <div>
-            <LoginView />
-        </div>
-        
+        <LoginView />
     )
 }
 

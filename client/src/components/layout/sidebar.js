@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {  Routes, Route, Link, useNavigate, Outlet} from 'react-router-dom';
 import { accAct } from '../../store/account-Slice';
-import { Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { Box, Drawer, Grid, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import { blue } from '@mui/material/colors';
 import { styled } from '@mui/system';
 
@@ -50,11 +50,13 @@ const Sidebar = () => {
         //     <MenuItem onClick={handleLogout}>Log Out</MenuItem>
         //     </Menu>
         // </ProSidebar>
-        <Drawer
+        
+            <Drawer
         variant="persistent"
         anchor="left"
         open={true}
-        PaperProps={{sx:{width:'200px'}}}
+         PaperProps={{sx:{width:'16.666667%'}}}
+         
       >
         <List>
             <ListItemButton sx={stl} selected={window.location.pathname==="/machinedb"} onClick={() => linkTO('machinedb')} >
@@ -73,7 +75,7 @@ const Sidebar = () => {
                 <ListItemText primary="Log out" />
             </ListItemButton>
         </List>
-      </Drawer>
+       </Drawer>
   )
 }
 
