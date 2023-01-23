@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 <p align="center">
   <h1 align="center">Manufacturing Automation</h1>
 </p>
@@ -6,6 +14,30 @@
 <p align="center">
   A web project for manufacturing digitization with React.js
 </p>
+
+<p align="center">
+  <h2 align="center">Used Technologies</h2>
+</p>
+
+- <a href="https://reactjs.org/">React JS</a>
+- <a href="https://redux-toolkit.js.org/">Redux Toolkit</a>
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<p align="center">
+  <h2 align="center">Screenshots</h2>
+</p>
+
+![alt text](https://user-images.githubusercontent.com/16413819/213978736-7b5fc4dc-3617-40fe-ad5a-4a244c2b12e2.png
+)
+![alt text](https://user-images.githubusercontent.com/16413819/213978740-53f2e2c3-7e8c-4eee-a4e5-2900356aecd9.png
+)
+![alt text](https://user-images.githubusercontent.com/16413819/213978742-f3a421bb-346c-4090-8118-c45eeb9c3ed3.png
+)
+
+
+
 
 ## Available Scripts
 
