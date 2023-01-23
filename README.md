@@ -21,6 +21,8 @@
 
 - <a href="https://reactjs.org/">React JS</a>
 - <a href="https://redux-toolkit.js.org/">Redux Toolkit</a>
+- <a href="https://mui.com/">Material UI</a>
+- <a href="https://supabase.com/">Supabase</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -28,11 +30,16 @@
 <p align="center">
   <h2 align="center">Screenshots</h2>
 </p>
+<br/>
 
 ![alt text](https://user-images.githubusercontent.com/16413819/213978736-7b5fc4dc-3617-40fe-ad5a-4a244c2b12e2.png
 )
+<br/>
+
 ![alt text](https://user-images.githubusercontent.com/16413819/213978740-53f2e2c3-7e8c-4eee-a4e5-2900356aecd9.png
 )
+<br/>
+
 ![alt text](https://user-images.githubusercontent.com/16413819/213978742-f3a421bb-346c-4090-8118-c45eeb9c3ed3.png
 )
 
@@ -75,41 +82,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### got help from:
-1. https://edupala.com/react-router-navigate-outside-component/
-
-### database info
-db hosting site: https://www.freemysqlhosting.net/
-email: mr*****6@gmail.com
-pass: 42..00
