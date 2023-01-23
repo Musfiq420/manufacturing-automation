@@ -7,16 +7,16 @@
 
 
 
-<p align="center">
-  <h1 align="center">Manufacturing Automation</h1>
+<p >
+  <h1 >Manufacturing Automation</h1>
 </p>
 
-<p align="center">
+<p >
   A web project for manufacturing digitization with React.js
 </p>
 
-<p align="center">
-  <h2 align="center">Used Technologies</h2>
+<p >
+  <h2 >Used Technologies</h2>
 </p>
 
 - <a href="https://reactjs.org/">React JS</a>
@@ -25,10 +25,8 @@
 - <a href="https://supabase.com/">Supabase</a>
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p align="center">
-  <h2 align="center">Screenshots</h2>
+<p>
+  <h2 >Screenshots</h2>
 </p>
 <br/>
 
@@ -46,8 +44,8 @@
 
 
 
-<p align="center">
-  <h2 align="center">Available Scripts</h2>
+<p >
+  <h2 >Available Scripts</h2>
 </p>
 
 In the project directory, you can run:
