@@ -46,7 +46,9 @@
 
 
 
-## Available Scripts
+<p align="center">
+  <h2 align="center">Available Scripts</h2>
+</p>
 
 In the project directory, you can run:
 
