@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  A web project for manufacturing digitization
+  A web project for manufacturing digitization with React.js
 </p>
 
 ## Available Scripts
