@@ -3,7 +3,9 @@
   <h1 align="center">Manufacturing Automation</h1>
 </p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  A web project for manufacturing digitization
+</p>
 
 ## Available Scripts
 
