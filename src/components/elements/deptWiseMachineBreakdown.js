@@ -23,7 +23,7 @@ const DeptWiseMachineBreakdown = () => {
 
   return (
     <FlexColCenterBig>
-      <H4>Dept Wise Machine Breakdown</H4>
+      <H4>Line Wise Machine Breakdown</H4>
       <CustomDatePickUi 
         AdapterDayjs={AdapterDayjs}
         date={date}
